@@ -1,0 +1,8 @@
+# .gitpod.yml
+tasks:
+  - init: pip install -r requirements.txt
+    command: mitmdump -s conductor_proxy.py -p 8080
+
+ports:
+  - port: 8080
+    onOpen: open-preview
